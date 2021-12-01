@@ -1,5 +1,9 @@
 export default function CarCard(props){
-    const {name,type,year,price,image}=props.data
+    const {id,name,type,year,price,image}=props.data
+    const clickBuy= props.clickBuy
+    const handlePurchase= ()=>{
+        clickBuy(id)
+    }
     return(
         <div style={{margin:'20px auto',width:'500px',border:'5px solid lightgray'}}>
             <div style={{display:'flex',flexDirection:'row',
@@ -17,7 +21,7 @@ export default function CarCard(props){
                 </div>
             </div>
             <div style={{textAlign:'right',borderTop:'1px solid black'}}>
-                <button style={{color:'green',backgroundColor:'lightgreen',fontSize:'15px',height:'30px',border:'2px solid green',cursor:'pointer'}}>Buy Now</button>
+                <button onClick={handlePurchase}style={{color:'green',backgroundColor:'lightgreen',fontSize:'15px',height:'30px',border:'2px solid green',cursor:'pointer'}}>Buy Now</button>
             </div>
         </div>
     )
