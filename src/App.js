@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
     <div className="App">
-      
+      <CarDetails/>
     </div>
   );
 }
